@@ -1,4 +1,29 @@
 <html>
-	<title>jony cube</title>
-	<body style="background-image:url('jonycube.gif')"></body>
+	<head>
+		<script src="scripts.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
+		integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ=="
+		crossorigin="anonymous" defer></script>
+		<title>JONY CUBE</title>
+		<style>
+			body {
+				background-color:black;
+				margin:0;
+				display:flex;
+				align-items:center;
+				justify-content: center;
+				overflow:hidden;
+			}
+			
+			#info {
+				position:absolute;
+				color:white;
+				left:10;
+				top:0;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="glCanvas" width="350" height="350"></canvas>
+	</body>
 </html>
