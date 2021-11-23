@@ -567,8 +567,15 @@ function handleMouseExit(e) {
 }
 
 function handleMouseDrag(e) {
-	xDelta = e.clientX-lastX;
-	yDelta = e.clientY-lastY;
-	lastX = e.clientX;
-	lastY = e.clientY;
+	if(e.touches != undefined) {
+		xDelta = e.touches[0].clientX-lastX;
+		yDelta = e.touches[0].clientY-lastY;
+		lastX = e.touches[0].clientX;
+		lastY = e.touches[0].clientY;
+	} else {
+		xDelta = e.clientX-lastX;
+		yDelta = e.clientY-lastY;
+		lastX = e.clientX;
+		lastY = e.clientY;
+	}
 }
