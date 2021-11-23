@@ -556,6 +556,10 @@ function handleMouseDown(e) {
 	dragging = true;
 	xDelta = 0;
 	yDelta = 0;
+	if(e.touches != undefined) {
+		lastX = e.touches[0].clientX;
+		lastY = e.touches[0].clientY;
+	}
 }
 
 function handleMouseUp(e) {
