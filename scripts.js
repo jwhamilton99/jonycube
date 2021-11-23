@@ -180,6 +180,11 @@ function main() {
 	canvas.addEventListener("mousemove", handleMouseDrag);
 	canvas.addEventListener("mouseout", handleMouseExit);
 	
+	canvas.addEventListener("touchmove", handleMouseDrag);
+	canvas.addEventListener("touchend", handleMouseUp);
+	canvas.addEventListener("touchstart", handleMouseDown);
+	canvas.addEventListener("touchcancel", handleMouseExit);
+	
 	initWebGL();
 }
 
